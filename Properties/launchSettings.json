@@ -30,6 +30,7 @@
     },
     "Container (Dockerfile)": {
       "commandName": "Docker",
+      "commandLineArgs": "--network cv-reseau",
       "launchBrowser": true,
       "launchUrl": "{Scheme}://{ServiceHost}:{ServicePort}/swagger",
       "environmentVariables": {

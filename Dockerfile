@@ -8,6 +8,7 @@ EXPOSE 8080
 EXPOSE 8081
 
 
+
 # Cette phase est utilisée pour générer le projet de service
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 ARG BUILD_CONFIGURATION=Release
