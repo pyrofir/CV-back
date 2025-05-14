@@ -6,15 +6,28 @@ using Npgsql.EntityFrameworkCore.PostgreSQL;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
-
-builder.Services.AddControllers();
-builder.Services.AddScoped<CompetenceService>();
-
-
 // Repo
 
 builder.Services.AddScoped<CompetenceRepository>();
+builder.Services.AddScoped<TypeDeCompetenceRepository>();
+builder.Services.AddScoped<FormationRepository>();
+
+
+// Add services to the container.
+
+builder.Services.AddScoped<CompetenceService>();
+builder.Services.AddScoped<FormationService>();
+
+
+
+
+
+
+
+// Controllers
+builder.Services.AddControllers();
+
+
 
 
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle

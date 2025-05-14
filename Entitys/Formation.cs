@@ -5,10 +5,10 @@ namespace CV_back.Entitys
     [Table("formation")]
     public class Formation
     {
-        public int ID { get; init; }
-        public string Dates { get; init; }
-        public string Ecole { get; init; }
-        public string Specialisation { get; init; }
-        public string Description { get; init; }
+        public int id { get; init; }
+        public string dates { get; init; }
+        public string ecole { get; init; }
+        public string specialisation { get; init; }
+        public string? description { get; init; }
     }
 }

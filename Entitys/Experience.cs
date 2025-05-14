@@ -5,17 +5,17 @@ namespace CV_back.Entitys
     [Table("experience")]
     public class Experience
     {
-        public int ID { get; init; }
-        public string Poste { get; init; }
-        public string Societe { get; init; }
-        public string Date { get; init; }
-        public string Duree { get; init; }
+        public int id { get; init; }
+        public string poste { get; init; }
+        public string societe { get; init; }
+        public string date { get; init; }
+        public string duree { get; init; }
 
-        public int Type { get; init; }
-        public string Context { get; init; }
-        public string Objectif { get; init; }
-        public string Resultat { get; init; }
-        public string SiteWeb { get; init; }
-        public string TypeDeSociete { get; init; }
+        public int type { get; init; }
+        public string context { get; init; }
+        public string objectif { get; init; }
+        public string resultat { get; init; }
+        public string siteWeb { get; init; }
+        public string typedesociete { get; init; }
     }
 }

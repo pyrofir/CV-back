@@ -2,10 +2,10 @@
 
 namespace CV_back.Entitys
 {
-    [Table("typedecompetence")]
+    [Table("type_de_competences")]
     public class TypeDeCompetence
     {
-        public int ID { get; init; }
-        public string Type { get; init; }
+        public int id { get; init; }
+        public string type { get; init; }
     }
 }
