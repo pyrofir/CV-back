@@ -2,10 +2,10 @@
 
 namespace CV_back.Entitys
 {
-    [Table("typeexperience")]
+    [Table("type_experience")]
     public class TypeExperience
     {
-        public int ID { get; init; }
-        public string Type { get; init; }
+        public int id { get; init; }
+        public string type { get; init; }
     }
 }

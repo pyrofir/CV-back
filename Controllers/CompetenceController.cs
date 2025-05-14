@@ -5,7 +5,7 @@ namespace CV_back.Controllers
 {
     [ApiController]
     [Route("CV/Competence")]
-    public class CompetenceController :ControllerBase
+    public class CompetenceController : ControllerBase
     {
         private readonly CompetenceService _service;
 
@@ -18,6 +18,16 @@ namespace CV_back.Controllers
         public IActionResult Get()
         {
             var rep = _service.GetAll();
+            return Ok(rep);
+        }
+
+
+
+
+        [HttpGet("sort")]
+        public IActionResult GetSort()
+        {
+            var rep = _service.GetAllSort();
             return Ok(rep);
         }
     }

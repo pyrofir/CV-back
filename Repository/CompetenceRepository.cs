@@ -8,6 +8,8 @@ namespace CV_back.Repository
     public interface ICompetenceRepository
     {
         List<Competence> GetAll();
+
+        List<Competence> GetByType(int TypeId);
     }
     public class CompetenceRepository : ICompetenceRepository
     {
@@ -21,6 +23,11 @@ namespace CV_back.Repository
         public List<Competence> GetAll() 
         {
             return _context.Competences.ToList();
+        }
+
+        public List<Competence> GetByType(int TypeId) 
+        {
+            return _context.Competences.Where(c => c.type == TypeId).ToList();
         }
     }
 }
