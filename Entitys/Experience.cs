@@ -2,7 +2,7 @@
 
 namespace CV_back.Entitys
 {
-    [Table("experience")]
+    [Table("experiences")]
     public class Experience
     {
         public int id { get; init; }
@@ -15,7 +15,7 @@ namespace CV_back.Entitys
         public string context { get; init; }
         public string objectif { get; init; }
         public string resultat { get; init; }
-        public string siteWeb { get; init; }
-        public string typedesociete { get; init; }
+        public string? site_web { get; init; }
+        public string? type_de_societe { get; init; }
     }
 }
