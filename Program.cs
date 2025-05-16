@@ -11,12 +11,17 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddScoped<CompetenceRepository>();
 builder.Services.AddScoped<TypeDeCompetenceRepository>();
 builder.Services.AddScoped<FormationRepository>();
+builder.Services.AddScoped<ExperiencesRepository>();
+builder.Services.AddScoped<TachesExperiencesRepository>();
+builder.Services.AddScoped<TypeExperienceRepository>();
+builder.Services.AddScoped<CompetencesDeProjetRepository>();
 
 
 // Add services to the container.
 
 builder.Services.AddScoped<CompetenceService>();
 builder.Services.AddScoped<FormationService>();
+builder.Services.AddScoped<ExperiencesService>();
 
 
 
