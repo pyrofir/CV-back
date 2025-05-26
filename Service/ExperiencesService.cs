@@ -41,7 +41,7 @@ namespace CV_back.Service
                 List<int> competencesIds = _repoCompetencesDeProjet.GetByProject(experience.id);
                 List<Competence> competence = _repoCompetence.GetByIds(competencesIds);
                 List<TacheExperience> taches = _repoTachesExperiences.GetById(experience.id);
-                string? type = _repoTypeExperience.GetById(experience.id)?.type;
+                string? type = _repoTypeExperience.GetById(experience.type)?.type;
 
                 rep.Add(new FullExperiences(experience, competence,taches, type));
 
