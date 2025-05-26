@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CV-back")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6ad2e18a205027939fcfe32bfc4b6f419514c581")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+bf1f55029e42746a564f1404d01f715f34d6f5cb")]
 [assembly: System.Reflection.AssemblyProductAttribute("CV-back")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CV-back")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

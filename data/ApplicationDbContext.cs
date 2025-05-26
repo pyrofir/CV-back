@@ -5,6 +5,7 @@ using Microsoft.VisualBasic;
 
 namespace CV_back.data
 {
+    //Tables de la database utilisé par les repository
     public class ApplicationDbContext: DbContext
     {
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)

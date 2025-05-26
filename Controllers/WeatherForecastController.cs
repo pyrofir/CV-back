@@ -1,5 +1,8 @@
 using Microsoft.AspNetCore.Mvc;
 
+
+//conserver à des fin de debug
+
 namespace CV_back.Controllers
 {
     [ApiController]

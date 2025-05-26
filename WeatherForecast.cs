@@ -1,5 +1,6 @@
 namespace CV_back
 {
+    //reponse de l'api de debug weatherforcast
     public class WeatherForecast
     {
         public DateOnly Date { get; set; }

@@ -3,6 +3,8 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace CV_back.Controllers
 {
+    //controller pour obtenir les compétences (envoyer sous liste de compétences), soit en brut soit triées par type de compétences (sous liste de SortCompetences)
+
     [ApiController]
     [Route("CV/Competence")]
     public class CompetenceController : ControllerBase

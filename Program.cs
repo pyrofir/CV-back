@@ -6,7 +6,7 @@ using Npgsql.EntityFrameworkCore.PostgreSQL;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Repo
+// Repository
 
 builder.Services.AddScoped<CompetenceRepository>();
 builder.Services.AddScoped<TypeDeCompetenceRepository>();
@@ -17,7 +17,7 @@ builder.Services.AddScoped<TypeExperienceRepository>();
 builder.Services.AddScoped<CompetencesDeProjetRepository>();
 
 
-// Add services to the container.
+// services
 
 builder.Services.AddScoped<CompetenceService>();
 builder.Services.AddScoped<FormationService>();
@@ -57,5 +57,6 @@ if (app.Environment.IsDevelopment())
 app.UseAuthorization();
 
 app.MapControllers();
+
 
 app.Run();

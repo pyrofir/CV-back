@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace CV_back.Controllers
 {
+    //Controller retournant les formations sous forme de liste de formations
     [ApiController]
     [Route("CV/Formation")]
     public class FormationController : ControllerBase

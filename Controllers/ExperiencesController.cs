@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace CV_back.Controllers
 {
+    //controller retournant les expériences, sous la forme de liste de FullExperiences
     [ApiController]
     [Route("CV/Experiences")]
     public class ExperiencesController : ControllerBase

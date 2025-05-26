@@ -2,6 +2,7 @@
 
 namespace CV_back.ResponseModel
 {
+    //Réponse envoyée par les controller
     public class SortCompetences
     {
         public string Type { get; }
