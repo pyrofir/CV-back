@@ -21,7 +21,7 @@ Ce projet a ete concu pour :
 ---
 
 ## Architecture du projet
-
+```
 CV-back/  
 ├── Controllers/               ### Points d'entree HTTP (API)  
 │   ├── CompetenceController.cs  
@@ -56,7 +56,7 @@ CV-back/
 ├── Program.cs / appsettings.json    
 ├── Dockerfile    
 └── README.md    
-
+```
 ---
 
 ## Prerequis
