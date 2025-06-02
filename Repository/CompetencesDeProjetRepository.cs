@@ -7,6 +7,7 @@ namespace CV_back.Repository
     public interface ICompetencesDeProjetRepository 
     {
         List<int> GetByProject(int id);
+        List<int> GetByCompetence(int id);
     }
     public class CompetencesDeProjetRepository : ICompetencesDeProjetRepository
     {
@@ -16,9 +17,14 @@ namespace CV_back.Repository
             _context = context;
         }
 
-        public List<int> GetByProject(int id) 
+        public List<int> GetByProject(int id)
         {
             return _context.CompetencesDeProjet.Where(c => c.projet == id).Select(c => c.competence).ToList();
+        }
+
+        public List<int> GetByCompetence(int id)
+        {
+            return _context.CompetencesDeProjet.Where(c => c.competence == id).Select(c => c.projet).ToList();
         }
     }
 }

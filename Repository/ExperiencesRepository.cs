@@ -7,6 +7,7 @@ namespace CV_back.Repository
     public interface IExperiencesRepository
     {
         List<Experience> GetAll();
+        List<Experience> GetByIds(List<int> Ids);
     }
     public class ExperiencesRepository : IExperiencesRepository
     {
@@ -20,6 +21,11 @@ namespace CV_back.Repository
         public List<Experience> GetAll() 
         {
             return _context.Experiences.ToList();
+        }
+
+        public List<Experience> GetByIds(List<int> Ids)
+        {
+            return _context.Experiences.Where(e => Ids.Contains(e.id)).ToList();
         }
     }
 }

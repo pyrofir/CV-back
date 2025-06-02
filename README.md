@@ -38,7 +38,7 @@ CV-back/
 │   ├── CompetenceRepository.cs      
 │   ├── ExperiencesRepository.cs   
 │   ├── FormationRepository.cs      
-│   └──    
+│   └── ...      
 │    
 ├── Entities/                  ### Modeles de donnees (EF Core)    
 │   ├── Experience.cs     

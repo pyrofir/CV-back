@@ -9,6 +9,7 @@ namespace CV_back.Service
     public interface IExperiencesService
     {
         List<FullExperiences> GetAll();
+        List<FullExperiences>  GetByCompetenceId(int competenceId);
     }
     public class ExperiencesService : IExperiencesService
     {
@@ -27,23 +28,17 @@ namespace CV_back.Service
             _repoCompetence = repoCompetence;
         }
 
-        public List<FullExperiences> GetAll()
+        private List<FullExperiences> BuildExperiences(List<Experience> exp) 
         {
-
             var rep = new List<FullExperiences>();
-
-            var experiences = _repoExperiences.GetAll();
-
-
-
-            foreach (var experience in experiences) 
+            foreach (var experience in exp)
             {
                 List<int> competencesIds = _repoCompetencesDeProjet.GetByProject(experience.id);
                 List<Competence> competence = _repoCompetence.GetByIds(competencesIds);
                 List<TacheExperience> taches = _repoTachesExperiences.GetById(experience.id);
                 string? type = _repoTypeExperience.GetById(experience.type)?.type;
 
-                rep.Add(new FullExperiences(experience, competence,taches, type));
+                rep.Add(new FullExperiences(experience, competence, taches, type));
 
             }
 
@@ -54,6 +49,28 @@ namespace CV_back.Service
 
 
             return rep;
+        }
+
+        public List<FullExperiences> GetAll()
+        {
+
+            var experiences = _repoExperiences.GetAll();
+
+
+            return BuildExperiences(experiences);
+            
+        }
+
+
+        public List<FullExperiences> GetByCompetenceId(int competenceId) 
+        {
+            var rep = new List<FullExperiences>();
+            List<int> projectIds = _repoCompetencesDeProjet.GetByCompetence(competenceId);
+
+            var experiences = _repoExperiences.GetByIds(projectIds);
+
+
+            return BuildExperiences(experiences);
         }
     }
 }

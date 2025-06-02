@@ -21,5 +21,13 @@ namespace CV_back.Controllers
             var rep = _service.GetAll();
             return Ok(rep);
         }
+
+
+        [HttpGet("/{competenceId}")]
+        public IActionResult GetByCompetenceId(int competenceId)
+        {
+            var rep = _service.GetByCompetenceId(competenceId);
+            return Ok(rep);
+        }
     }
 }
