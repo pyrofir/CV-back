@@ -23,7 +23,7 @@ namespace CV_back.Controllers
         }
 
 
-        [HttpGet("/{competenceId}")]
+        [HttpGet("{competenceId}")]
         public IActionResult GetByCompetenceId(int competenceId)
         {
             var rep = _service.GetByCompetenceId(competenceId);
